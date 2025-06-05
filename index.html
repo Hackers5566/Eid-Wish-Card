@@ -1,0 +1,292 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" href="https://sass-lang.com/">
+   <link rel="stylesheet" href="index.pug">
+  <title>Greeting Card</title>
+  <link rel="stylesheet" href=".sass" />
+  <meta name="twitter:card" content="summary" />
+    <meta property="og:title" content="Wish Card" />
+    <meta property="og:site_name" content="Wish Card" />
+    <meta property="og:url" content="https://wishcard.free.nf/C2.php?code=8eDGZEQI" />
+    <meta property="og:image" content="\tests\saba.jpg" />
+    <meta property="og:image:width" content="402" />
+    <meta property="og:image:height" content="548" />
+    <meta property="og:type" content="website"/>
+    <meta name="robots" content="noindex,nofollow">
+<body>
+  <h2>Click this card</h2>
+  <div class="background-image">
+    <img src="\background.jpg" alt="back">
+  </div>
+  <div class="body">
+    <div class="birthdayCard">
+            <div class="card">
+        <div class="card-inner">
+          <div class="cardFront">
+            <h3 id="title" class="happy">
+              Eid-Ul-Adha Mobarak</h3>
+                <img src="\saba.jpg" alt="fast">
+          </div>
+          <div class="card-back">
+            <img src="\eid mobarak.jpg" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="cardInside">
+        <h3 id="title" class="back">
+          Eid-Ul-Adha Mobarak</h3>
+        <p id="title">
+          SABA</p>
+        <p id="desc">
+          "Eid Mubarak, Saba! 🌟💫 May Allah bless you with happiness, peace, and love. 
+          You're the bestie who makes every day special! ❤🎉"</p>
+        <p id="name" class="name">
+          JAVARIA HASHIM</p>
+      </div>
+          </div>
+  </div>
+    <!-- <script src="script.js"></script> -->
+</body>
+  
+<style>
+body, html {
+ overflow-y: hidden;
+ overflow-x: auto;
+ transition: all .8s;
+}
+body {
+ margin: 0;
+ padding: 0;
+ height: 100vh; 
+ background-color:black;
+}
+.background-image, img{
+  position: initial;
+  width: 1400px;
+  height: 1620px;
+}
+.body {
+ position: absolute;
+ top: 30%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ transition: transform 0.5s ease;
+ margin-top: 100px;
+ z-index: 3;
+}
+
+h2 {
+ animation: 1s blink linear infinite;
+ display: flex;
+ justify-content: center;
+}
+
+.birthdayCard {
+ position: relative;
+ width: 250px;
+ height: 350px;
+ cursor: pointer;
+ /* transform-style: preserve-3d; */
+ transform: perspective(2500px);
+ transition: 1s;
+}
+
+#UrlError{
+  margin: 100px 30px;
+  color: red;
+}
+
+.card {
+  width: 500px;
+  height: 350px;
+  /* perspective: 1000px; */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: left; /* Flip starts from left edge */
+  transition: transform 0.8s;
+  z-index: 5;
+}
+
+.cardFront,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.card-back {
+  background: #1a1a00;
+  transform: rotateY(180deg); /* Just flip the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid, #006600;
+  border-right: 2px dashed #006600;  
+  background: linear-gradient(280deg, #000033, #a500f1);
+  /* background: linear-gradient(45deg, #ff4081, #a500f1); */
+}
+
+.card-back img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 4px;
+  /* border: 5px dotted #ff69b4; */
+}
+
+.cardFront {
+ position: absolute;
+ background-color: #a500f1;
+ width: 250px;
+ height: 350px;
+ overflow: hidden;
+ transform-origin: left;
+ box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 30px 0 50px rgba(0, 0, 0, 0.4);
+ transition: .6s;
+ border: 2px solid gold;
+}
+
+.happy {
+ font-family: Tahoma, sans-serif;
+ text-align: center;
+ margin: 30px;
+ background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+ transition: .1s;
+}
+.cardFront, .img {
+position: relative;
+height: 100%;
+width: 50%;
+}
+.cardInside {
+ position: absolute;
+ background-color:  #0d8066;
+ width: 250px;
+ height: 350px;
+ z-index: 1;
+ left: 0;
+ top: 0;
+ box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+ border: 2px solid gold;
+ border-left: 2px dashed gold; 
+}
+p {
+ font-family: cursive;
+ margin: 2px 8px 0px 10px;
+ color: #000;
+}
+#desc{
+    /* border: 2px solid #ef476f; */
+    font-size: medium;
+    position: relative;
+    height: 210px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+}
+
+#desc::-webkit-scrollbar {
+    display: none;
+}
+
+.name {
+ position: fixed;
+ left: 80px;
+ width: 145px;
+ text-align: right;
+ color: #630303;
+ text-decoration: underline;
+}
+
+.back {
+ font-family: Tahoma, sans-serif;
+ color: #745903;
+ text-align: center;
+ margin: 20px;
+ outline-color: #057083;
+ outline-style: dashed;
+}
+
+.birthdayCard:hover {
+ transform: perspective(2500px) rotate(5deg);
+ /* box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5); */
+}
+
+/* .birthdayCard:hover .cardFront {
+ transform: rotateY(-160deg);
+} */
+.birthdayCard:hover .card-inner {
+  transform: rotateY(-160deg);
+}
+
+/* .birthdayCard:hover .happy {
+ visibility: hidden;
+} */
+
+@keyframes blink {
+ 0% {
+  color: white;
+ }
+
+ 20% {
+  color: yellow;
+ }
+
+ 40% {
+  color: greenyellow;
+ }
+
+ 60% {
+  color: red;
+ }
+
+ 80% {
+  color: hotpink;
+ }
+
+ 100% {
+  color: blue;
+ }
+}
+
+footer{
+ font-size: 14px;
+ color: white;
+ position: fixed;
+ left: 5px;
+ bottom: 10px;
+}
+footer a{
+ color: white;
+}
+
+@media screen and (max-width: 820px) {
+  .body:hover {
+    transform: translate(calc(-100% + 210px), -50%);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .body:hover {
+    transform: translate(calc(-100% + 320px), -50%);
+  }
+}
+</style>
+
+</html>
